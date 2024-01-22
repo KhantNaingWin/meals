@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+use App\Interfaces\AdminInterface;
 use App\Interfaces\api\CategoryApiInterface;
 use App\Interfaces\api\ProductApiInterface;
 use App\Interfaces\CategoryInterface;
 use App\Interfaces\ProductInterface;
+use App\Repositories\AdminRepository;
 use App\Repositories\api\CategoryApiRepository;
 use App\Repositories\api\ProductApiRepository;
 use App\Repositories\CategoryRepository;
@@ -42,6 +44,10 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ProductApiInterface::class,
             ProductApiRepository::class
+        );
+        $this->app->bind(
+           AdminInterface::class,
+           AdminRepository::class
         );
     }
 }

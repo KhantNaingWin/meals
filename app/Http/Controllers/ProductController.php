@@ -43,7 +43,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $this->ProductInterface->store($request);
-        return redirect('products');
+        return redirect('admin/products');
     }
 
     /**
@@ -71,7 +71,7 @@ class ProductController extends Controller
     {
         // dd(request()->all());
         $this->ProductInterface->update($id);
-        return redirect('products');
+        return redirect('admin/products');
     }
 
     /**
@@ -80,6 +80,6 @@ class ProductController extends Controller
     public function destroy(string $id)
     {
         $this->ProductInterface->destroy($id);
-        return redirect('products');
+        return redirect('admin/products');
     }
 }

@@ -5,7 +5,7 @@
 
     <div class="page-content">
         <div class="container-fluid">
-            <form action="{{ url('categories') }}" method="POST">
+            <form action="{{ url('admin/categories') }}" method="POST">
                 @csrf
                 @method('POST')
                <div class="d-flex justify-content-center align-items-center">

@@ -5,7 +5,7 @@
 
     <div class="page-content">
         <div class="container-fluid  d-flex justify-content-center align-items-center">
-            <form action="{{ url('products') }}" method="POST"
+            <form action="{{ url('admin/products') }}" method="POST"
             enctype="multipart/form-data">
 
                 @csrf
